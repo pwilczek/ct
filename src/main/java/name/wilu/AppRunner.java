@@ -12,7 +12,7 @@ public class AppRunner {
                 17, 42, 12, 6, -12, null, 0, 6, -9, 42, null, 1, -42
         ));
         //
-        assert result.size() == 3;
+        assert result.size() == 2;
         assert result.get(0) == 42;
         assert result.get(1) == 6;
     }
