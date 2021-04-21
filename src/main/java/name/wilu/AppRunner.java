@@ -9,10 +9,10 @@ public class AppRunner {
         DuplicatesFinder algo = null;
         //
         List<Integer> result = new App(algo).compute(Arrays.asList(
-                17, 42, 12, 6, 12, null, 42, 0, -9, 6, null, 12, 1, -42
+                17, 42, 12, 6, -12, null, 0, 6, -9, 42, null, 1, -42
         ));
         //
-        assert result.size() == 2;
+        assert result.size() == 3;
         assert result.get(0) == 42;
         assert result.get(1) == 6;
     }
