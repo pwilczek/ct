@@ -3,6 +3,9 @@ package name.wilu;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Add -ea to VM options before running to enable assertions
+ */
 public class AppRunner {
     public static void main(String[] args) {
         //
@@ -13,8 +16,8 @@ public class AppRunner {
         ));
         //
         assert result.size() == 2;
-        assert result.get(0) == 42;
-        assert result.get(1) == 6;
+        assert result.contains(42);
+        assert result.contains(6);
     }
 }
 
@@ -36,8 +39,7 @@ class App {
  */
 interface DuplicatesFinder {
     /**
-     * @return List of numbers which are duplicated in the same order
-     * they appeared in passed list, null values are skipped.
+     * @return List of numbers which are duplicated, null values are skipped.
      */
     List<Integer> execute(List<Integer> numbers);
 }
