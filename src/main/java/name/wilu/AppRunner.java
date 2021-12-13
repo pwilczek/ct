@@ -12,12 +12,10 @@ public class AppRunner {
         DuplicatesFinder algo = null;
         //
         List<Integer> result = new App(algo).compute(Arrays.asList(
-                17, 42, 12, 6, -12, null, 0, 6, -9, 42, null, 1, 6, -42
+                17, 42, 12, 6, -12, null, 0, 6, -9, 42, null, 1, 6, -42, 42
         ));
         //
-        assert result.size() == 2;
-        assert result.contains(42);
-        assert result.contains(6);
+        new BusinessLogic().execute(result);
     }
 }
 
